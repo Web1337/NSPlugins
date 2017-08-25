@@ -43,6 +43,7 @@ if (SERVER) then
             if (table.HasValue(self.ignored, v.uniqueID)) then continue end
             --Thanks efex03 for noticing the issue with equipped items
             if (v:getData("equip")) then
+        --Thanks Micronde and Web for properly unequiping items
                 entity:getInv():add(v.uniqueID)
                 if v.functions.EquipUn.onRun then
                 v.player = ply
